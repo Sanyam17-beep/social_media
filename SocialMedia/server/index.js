@@ -29,6 +29,7 @@ app.use(
         methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH','OPTIONS']
     })
 );
+app.options("*",cors());
 app.use(express.json({ limit: "10mb" }));
 app.use(morgan("common"));
 app.use(cookieParser());
