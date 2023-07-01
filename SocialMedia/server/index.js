@@ -30,11 +30,10 @@ console.log('here env', process.env.NODE_ENV);
 if(process.env.NODE_ENV === 'production') {
     origin = process.env.CLIENT_ORIGIN;
 }
-console.log(origin);
 app.use(
     cors({
         credentials: true,
-        origin
+        origin:"*"
     })
 );
 
