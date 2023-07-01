@@ -22,6 +22,9 @@ cloudinary.config({
 const app = express();
 
 //middlewares
+app.options("*",cors(),()=>{
+    console.log("Inside Preflight request")
+});
 app.use(
     cors({
         credentials: true,
@@ -29,7 +32,7 @@ app.use(
         methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH','OPTIONS']
     })
 );
-app.options("*",cors());
+
 app.use(express.json({ limit: "10mb" }));
 app.use(morgan("common"));
 app.use(cookieParser());
