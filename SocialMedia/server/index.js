@@ -23,7 +23,7 @@ const app = express();
 
 //middlewares
 app.options("*",(req,res)=>{
-    res.header("Access-Control-Allow-Origin", "https://social-media-yydx-git-master-sanyam17-beep.vercel.app/");
+    res.header("Access-Control-Allow-Origin", "https://social-media-yydx-git-master-sanyam17-beep.vercel.app/*");
     res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
     res.header("Access-Control-Allow-Credentials","true");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
@@ -32,7 +32,7 @@ app.options("*",(req,res)=>{
 app.use(
     cors({
         credentials: true,
-        origin:"https://social-media-yydx-git-master-sanyam17-beep.vercel.app/",
+        origin:"https://social-media-yydx-git-master-sanyam17-beep.vercel.app/*",
         methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH','OPTIONS']
     })
 );
