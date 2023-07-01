@@ -30,6 +30,7 @@ console.log('here env', process.env.NODE_ENV);
 if(process.env.NODE_ENV === 'production') {
     origin = process.env.CLIENT_ORIGIN;
 }
+origin = "https://social-media-yydx-9lmgfeu42-sanyam17-beep.vercel.app/";
 app.use(
     cors({
         credentials: true,
