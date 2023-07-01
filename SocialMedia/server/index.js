@@ -22,6 +22,13 @@ cloudinary.config({
 const app = express();
 
 //middlewares
+app.use(
+    cors({
+        credentials: true,
+        origin:"*",
+        methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH','OPTIONS']
+    })
+);
 app.use(express.json({ limit: "10mb" }));
 app.use(morgan("common"));
 app.use(cookieParser());
@@ -30,12 +37,7 @@ console.log('here env', process.env.NODE_ENV);
 if(process.env.NODE_ENV === 'production') {
     origin = process.env.CLIENT_ORIGIN;
 }
-app.use(
-    cors({
-        credentials: true,
-        origin:"*"
-    })
-);
+
 
 app.use("/auth", authRouter);
 app.use("/posts", postsRouter);
