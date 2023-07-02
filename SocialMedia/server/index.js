@@ -32,7 +32,8 @@ app.options("*",(req,res)=>{
 app.use(
     cors({
         origin:"https://social-media-yydx.vercel.app",
-        methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH','OPTIONS']
+        methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH','OPTIONS'],
+        credentials:true
     })
 );
 
