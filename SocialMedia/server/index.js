@@ -29,12 +29,12 @@ app.options("*",(req,res)=>{
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     res.send();
 });
-// app.use(
-//     cors({
-//         origin:"https://social-media-yydx.vercel.app",
-//         methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH','OPTIONS']
-//     })
-// );
+app.use(
+    cors({
+        origin:"https://social-media-yydx.vercel.app",
+        methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH','OPTIONS']
+    })
+);
 
 app.use(express.json({ limit: "10mb" }));
 app.use(morgan("common"));
