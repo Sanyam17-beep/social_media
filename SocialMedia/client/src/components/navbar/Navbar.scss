@@ -1,7 +1,7 @@
 .Navbar {
     width: 100%;
     position: fixed;
-    background-color: rgba(14, 3, 18, 0.901);
+    background-color: rgb(6 41 46 / 93%);
     top: 0;
     height: 60px;
     border-bottom: 1px solid var(--border-color);
@@ -13,7 +13,10 @@
         
         justify-content: space-between;
         .banner{
-            color: aliceblue;
+            font-size: 32px;
+  background: -webkit-radial-gradient(#0491f6, #01ff12);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
         }
     }
 

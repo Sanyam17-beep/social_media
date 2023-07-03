@@ -1,12 +1,18 @@
 .UpdateProfile {
-
+    
     .container {
         display: flex;
         padding-top: 20px;
     }
+    @media only screen and (max-width: 600px) {
+        .container {
+display: block;
+        }  
+    }
     .left-part {
         flex: 1;
         text-align: center;
+        
 
         .input-user-img {
             display: flex;
@@ -33,14 +39,15 @@
             }
         }
     }
-
+ 
     .right-part {
         flex: 3;
-
+       
         form {
             border: 1px solid var(--border-color);
             padding: 20px;
             border-radius: 4px;
+            background-color: #98d7553c;
         }
 
         input {
@@ -59,6 +66,14 @@
         .delete-account {
             margin-top: 16px;
             background-color: red;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .cen{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+            }  
         }
     }
 }

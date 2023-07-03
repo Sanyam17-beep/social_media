@@ -72,10 +72,10 @@ function UpdateProfile() {
                         />
                         <input type="submit" className="btn-primary" onClick={handleSubmit}/>
                     </form>
-
-                    <button className="delete-account btn-primary">
+                   <div className="cen">   <button className="delete-account btn-primary">
                         Delete Account
-                    </button>
+                    </button></div>
+                 
                 </div>
             </div>
         </div>

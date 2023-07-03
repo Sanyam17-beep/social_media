@@ -7,7 +7,8 @@ import CreatePost from "../createPost/CreatePost";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserProfile } from "../../redux/slices/postsSlice";
 import { followAndUnfollowUser } from "../../redux/slices/feedSlice";
-
+import { AiFillCloseCircle,AiOutlineUser} from "react-icons/ai";
+import { BiSolidUserDetail } from "react-icons/bi";
 function Profile() {
     const navigate = useNavigate();
     const params = useParams();
@@ -35,7 +36,11 @@ function Profile() {
             userIdToFollow: params.userId
         }))
     }
+    const [isActive, setActive] = useState("false");
 
+    const ToggleClass = () => {
+      setActive(!isActive);
+    };
     return (
         <div className="Profile">
             <div className="container">
@@ -45,18 +50,20 @@ function Profile() {
                         <Post key={post._id} post={post} />
                     ))}
                 </div>
-                <div className="right-part">
+                <div className={isActive ? "box" : "box-res"} onClick={ToggleClass}> <AiOutlineUser className="user"></AiOutlineUser> </div>
+                <div className={isActive ? "right-part" : "res-si"}>
                     <div className="profile-card">
                         <img
                             className="user-img"
                             src={userProfile?.avatar?.url ? userProfile?.avatar?.url : userImg}
                             alt=""
                         />
+                        <AiFillCloseCircle className='close' onClick={ToggleClass}></AiFillCloseCircle>
                         <h3 className="user-name">{userProfile?.name}</h3>
                         <p className="bio">{userProfile?.bio}</p>
                         <div className="follower-info">
-                            <h4>{`${userProfile?.followers?.length} Followers`}</h4>
-                            <h4>{`${userProfile?.followings?.length} Followings`}</h4>
+                            <h4 className="text">{`${userProfile?.followers?.length} Followers`}</h4>
+                            <h4 className="text">{`${userProfile?.followings?.length} Followings`}</h4>
                         </div>
                         {!isMyProfile && (
                             <h5
