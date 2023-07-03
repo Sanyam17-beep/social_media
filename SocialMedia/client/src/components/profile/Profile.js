@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUserProfile } from "../../redux/slices/postsSlice";
 import { followAndUnfollowUser } from "../../redux/slices/feedSlice";
 import { AiFillCloseCircle,AiOutlineUser} from "react-icons/ai";
-import { BiSolidUserDetail } from "react-icons/bi";
 function Profile() {
     const navigate = useNavigate();
     const params = useParams();
