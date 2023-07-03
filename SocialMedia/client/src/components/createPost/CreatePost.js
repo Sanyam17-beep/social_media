@@ -48,6 +48,7 @@ function CreatePost() {
 
     return (
         <div className="CreatePost">
+            <div className="container">
             <div className="left-part">
                 <Avatar src={myProfile?.avatar?.url}/>
             </div>
@@ -84,6 +85,7 @@ function CreatePost() {
                     </div>
                     <button className="post-btn btn-primary" onClick={hanldePostSubmit}>Post</button>
                 </div>
+            </div>
             </div>
         </div>
     );

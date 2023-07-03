@@ -50,7 +50,7 @@ function Login() {
                     <input type="submit" className="submit" />
                 </form>
                 <p className="subheading">
-                    Do not have an account? <Link to="/signup">Sign Up</Link>
+                    Do not have an account? <Link className="link" to="/signup">Sign Up</Link>
                 </p>
             </div>
         </div>

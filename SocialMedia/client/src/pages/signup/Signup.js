@@ -54,7 +54,7 @@ function Signup() {
                     <input type="submit" className="submit" />
                 </form>
                 <p className="subheading">
-                    Already have an account? <Link to="/login">Log In</Link>
+                    Already have an account? <Link className="link" to="/login">Log In</Link>
                 </p>
             </div>
         </div>
